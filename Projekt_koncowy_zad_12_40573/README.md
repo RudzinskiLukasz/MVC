@@ -5,7 +5,6 @@
 2. [Funkcjonalności](#funkcjonalności)  
 3. [Technologie](#technologie)  
 4. [Instrukcja uruchomienia](#instrukcja-uruchomienia)  
-5. [Plik seed](#plik-seed)  
 
 ---
 
@@ -54,15 +53,7 @@ source/venv/bin/activate
 
 pip install -r requirements.txt
 
-4. **Uruchomienie aplikacji**
-
-flask run
-
-5. **Dostęp z przeglądarki**
-
-http://127.0.0.1:5000
-
-## Plik seed
+4. **Plik seed**
 
 Inicjalizuje baze danych z przykładowymi filmami.
 ŚRODOWISKO MUSI BYĆ AKTYWNE
@@ -73,3 +64,11 @@ python seed.py
 
 Skrypt utworzy bazę danych i doda do niej rekordy.
 Po wykonatniu powyższego korzystamy z komendy: flask run
+
+4. **Uruchomienie aplikacji**
+
+flask run
+
+5. **Dostęp z przeglądarki**
+
+http://127.0.0.1:5000
