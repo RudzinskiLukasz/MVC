@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Szczegóły filmu{% endblock %}
+{% block content %}
+<h2>Szczegóły filmu</h2>
+<ul class="list-group">
+    <li class="list-group-item"><strong>Tytuł:</strong> {{ film.tytul }}</li>
+    <li class="list-group-item"><strong>Reżyser:</strong> {{ film.rezyser }}</li>
+    <li class="list-group-item"><strong>Ocena:</strong> {{ film.ocena }}</li>
+</ul>
+<a href="{{ url_for('index') }}" class="btn btn-success mt-3">➕ Wróć do listy</a>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Lista filmów{% endblock %}
+{% block content %}
+<h2>📃 Lista filmów</h2>
+<a href="{{ url_for('add_edit') }}" class="btn btn-primary mb-3">➕ Dodaj film</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Tytuł</th>
+            <th>Reżyser</th>
+            <th>Ocena</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for film in filmy %}
+        <tr>
+            <td><a href="{{ url_for('szczegoly', film_id=film.id) }}">{{ film.tytul }}</a></td>
+            <td>{{ film.rezyser }}</td>
+            <td>{{ film.ocena }}</td>
+            <td>
+                <a href="{{ url_for('edytuj_film', film_id=film.id) }}" class="btn btn-sm btn-warning">✏️</a>
+                <form action="{{ url_for('usun_film', film_id=film.id) }}" method="post" style="display:inline;">
+                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Czy na pewno usunąć film?')">🗑️</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
