@@ -37,7 +37,7 @@ Projekt to prosty katalog filmów z możliwością wyświetlania listy filmów, 
 
 1. **Klonowanie repo**  
 
-git clone https://github.com/RudzinskiLukasz/MVC/tree/master/Projekt_koncowy_zad_12_40573
+git clone https://github.com/RudzinskiLukasz/MVC/
 
 2. **Utworzenie środowiska wirtualnego**
 
